@@ -1,17 +1,18 @@
-# Flask Boilerplate for Profesional Development
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
-<p align="center">
-    <a href="https://youtu.be/ORxQ-K3BzQA"><img height="200px" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/how-to.png?raw=true?raw=true" /></a>
+<p>
+<h4 align="center">4Geeks Academy</h4>
+<h2 align="center" style="margin: 0">Build a Rick and Morty REST API</h2>
+<h3 align="center" style="margin-top: 0">Keili Rosales</h3>
 </p>
 
-## Features
+## Objective
 
-- Extensive documentation [here](https://start.4geeksacademy.com).
-- Integrated with Pipenv for package managing.
-- Fast deloyment to heroku with `$ pipenv run deploy`.
-- Use of `.env` file.
-- SQLAlchemy integration for database abstraction.
+The objective of this exercise is to build an API to manage the Rick and Morty blog, where users will be able to list characters, locations and create or delete favorites. 
+
+In order for users to be able to do all these actions, it is necessary to apply the following steps:
+
+- Model the database: Create a database and the necessary tables to store that information.
+- Build endpoints in this case using Flask.
+- Constantly testing the endpoints with postman.
 
 ## Installation (automatic if you are using gitpod)
 
@@ -21,33 +22,12 @@ The following steps are automatically runned withing gitpod, if you are doing a 
 
 ```sh
 pipenv install;
-mysql -u root -e "CREATE DATABASE example";
+mysql -u root -e "CREATE DATABASE example"; Replace with mysql -u root -e "USE example" if the database example is already created".
 pipenv run init;
 pipenv run migrate;
 pipenv run upgrade;
 ```
-
-## How to Start coding?
-
-There is an example API working with an example database. All your application code should be written inside the `./src/` folder.
-
-- src/main.py (it's where your endpoints should be coded)
-- src/models.py (your database tables and serialization logic)
-- src/utils.py (some reusable classes and functions)
-- src/admin.py (add your models to the admin and manage your data easily)
-
-For a more detailed explanation, look for the tutorial inside the `docs` folder.
-
-## Remember to migrate every time you change your models
-
-You have to migrate and upgrade the migrations for every update you make to your models:
-```
-$ pipenv run migrate (to make the migrations)
-$ pipenv run upgrade  (to update your databse with the migrations)
-```
-
-
-# Manual Installation for Ubuntu & Mac
+## Manual Installation for Ubuntu & Mac
 
 ⚠️ Make sure you have `python 3.6+` and `MySQL` installed on your computer and MySQL is running, then run the following commands:
 ```sh
@@ -56,19 +36,13 @@ $ pipenv run migrate (to create the database)
 $ pipenv run start (to start the flask webserver)
 ```
 
+## Technologies
+- Python
+- Flask
+- SQLAlchemy
 
-## Deploy to Heroku
+## Contributions
 
-This template is 100% compatible with Heroku[https://www.heroku.com/], just make sure to understand and execute the following steps:
+I´d love to get your appreciation or report on the code at https://github.com/keikeka/Rick-and-Morty-REST-API
 
-```sh
-// Install heroku
-$ npm i heroku -g
-// Login to heroku on the command line
-$ heroku login -i
-// Create an application (if you don't have it already)
-$ heroku create <your_application_name>
-// Commit and push to heroku (commited your changes)
-$ git push heroku main
-```
-:warning: For a more detailed explanation on working with .env variables or the MySQL database [read the full guide](https://start.4geeksacademy.com/backend/deploy-heroku-mysql).
+Thank you so much!
